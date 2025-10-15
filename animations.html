@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECLIPSE</title>
+    <style>
+        body{
+            background-color:rgb(251, 211, 160);
+            margin: 0;
+            height: 400px;
+            width: 400px;
+            overflow: hidden;
+        }
+        .sun{
+            width: 300px;
+            height: 300px;
+            background-color:yellow;
+            border-radius: 100%;
+            overflow: hidden;
+
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            margin: auto;
+        }
+        .moon{
+            width: 275px;
+            height: 275px;
+            background-color: orangered;
+            border-radius: 100%;
+
+            position: absolute;
+            top: 31%;
+            left: 41%;
+            margin: auto;
+
+            animation-duration: 8s;
+            animation-delay: 3s;
+            animation-name: eclipse;
+            animation-timing-function: linear infinite;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes eclipse{
+            0%{
+                left: 0%;
+            }
+            25%{
+                left: 100%;
+            }
+            50%{
+                left: 40%;
+            }
+            100%{
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sun"></div>
+    <div class="moon"></div>
+</body>
+</html>
